@@ -8,7 +8,7 @@ import lombok.Data;
 
 
 @Data
-public class Contact {
+public class Contact extends baseEntity{
 	
 	@NotBlank(message="Name must not be blank")
 	@Size(min=3, message="Name must be atleast 3 characters long")
@@ -27,6 +27,10 @@ public class Contact {
 	
 	@NotBlank(message="Message must not be blank")
 	private String message;
+	
+	private String status;
+	
+	private int contactId;
 	
 
 	
